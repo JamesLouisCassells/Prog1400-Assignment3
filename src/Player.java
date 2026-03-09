@@ -24,5 +24,8 @@ public class Player extends Character { //inheritance
     public void setP_weapon(Weapon p_weapon) {
         this.p_weapon = p_weapon;
     }
+
+//    public String toString() {//to be filled
+//    }
 }
 
