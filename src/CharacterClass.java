@@ -23,6 +23,7 @@ public abstract class CharacterClass {
         this.armourType = armourType;
     }
 
+    //superclass does not provide the value, FORCES THE SUBCLASS TO IMPLEMENT
     public abstract int getClassBonus();
 
     @Override

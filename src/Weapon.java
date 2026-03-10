@@ -23,6 +23,7 @@ public abstract class Weapon {
         this.damageBonus = damageBonus;
     }
 
+    //superclass does not provide the value, FORCES THE SUBCLASS TO IMPLEMENT
     public abstract int getAttackValue();
 
     @Override
