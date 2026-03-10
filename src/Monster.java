@@ -14,7 +14,8 @@ public class Monster extends Character {
         this.p_monsterType = p_monsterType;
     }
 
-//    public String toString() {
-//    //to be filled
-//    }
+    @Override
+    public String toString() {
+        return "Monster: " + p_monsterType;
+    }
 }

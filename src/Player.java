@@ -25,7 +25,17 @@ public class Player extends Character { //inheritance
         this.p_weapon = p_weapon;
     }
 
-//    public String toString() {//to be filled
-//    }
+    public int calculateAttack() {
+        return getBaseAttack()
+                + p_weapon.getAttackValue()
+                + p_characterClass.getClassBonus();
+    }
+
+    @Override
+    public String toString() {
+        return getName() +
+                " | Class: " + p_characterClass +
+                " | Weapon: " + p_weapon;
+    }
 }
 
