@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="04e3f9f9-0345-4cd8-9598-30d870b1bb8e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Assignment3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment3A.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment3A/Assignment3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/CharacterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/CharacterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Cleric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Dagger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Hammer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Paladin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Wizard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CreationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CreationPanel.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "JamesLouisCassells"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JamesLouisCassells/Prog1400-Assignment3.git",
+    "accountId": "cf859e91-915d-4776-87b9-f04ea3d8d6ae"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-25.0.1/lib/src.zip!/java.desktop/javax/swing/ImageIcon.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3AxMlnVRqNvZecM0vH08XncheWE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/jlaca/nscc_y1/y1s2/PROG1400-OOP/Assignment3",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04e3f9f9-0345-4cd8-9598-30d870b1bb8e" name="Changes" comment="" />
+      <created>1773529921924</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773529921924</updated>
+    </task>
+    <servers />
+  </component>
+</project>
