@@ -1,3 +1,9 @@
+//pseudo for this class:
+// - creates the window
+// - creates the three screens
+// - stores the current player
+// - switches between panels
+
 package GUI;
 import Classes.Player;
 import javax.swing.*;
