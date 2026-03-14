@@ -1,3 +1,4 @@
+package Classes;
 public class Mage extends CharacterClass {
     public Mage() {
         super("Mage", "Cloth");

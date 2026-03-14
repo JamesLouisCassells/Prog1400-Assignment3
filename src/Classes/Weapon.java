@@ -1,3 +1,4 @@
+package Classes;
 public abstract class Weapon {
     private String weaponName;
     private int damageBonus;

@@ -1,3 +1,4 @@
+package Classes;
 public class Warrior extends CharacterClass {
     public Warrior() {
         super("Warrior", "Plate");

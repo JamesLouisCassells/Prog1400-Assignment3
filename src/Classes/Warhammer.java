@@ -1,3 +1,4 @@
+package Classes;
 public class Warhammer extends Weapon {
     public Warhammer() {
         super("Warhammer", 7);

@@ -1,3 +1,5 @@
+package Classes;
+
 public class Player extends Character { //inheritance
     //attributes, encapsulation (private fields), aggregation (player has a CharacterClass and Weapon)
     private CharacterClass characterClass;

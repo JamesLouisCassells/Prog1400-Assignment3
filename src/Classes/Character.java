@@ -1,3 +1,4 @@
+package Classes;
 public abstract class Character {
 
     //Attributes of character shared by all children

@@ -1,3 +1,4 @@
+package Classes;
 public abstract class CharacterClass {
     private String className;
     private String armourType;

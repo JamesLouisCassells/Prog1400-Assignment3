@@ -1,3 +1,4 @@
+package Classes;
 public class Monster extends Character {
     private String p_monsterType;
 

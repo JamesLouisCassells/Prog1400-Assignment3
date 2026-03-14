@@ -1,3 +1,4 @@
+package Classes;
 public class Paladin extends CharacterClass {
     public Paladin() {
         super("Paladin", "Mail");
