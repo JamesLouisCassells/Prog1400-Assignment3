@@ -28,6 +28,7 @@ public abstract class Weapon {
 
     @Override
     public String toString() {
+
         return weaponName + " (Damage Bonus: " + damageBonus + ")";
     }
 }

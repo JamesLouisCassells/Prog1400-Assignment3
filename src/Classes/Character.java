@@ -1,4 +1,5 @@
 public abstract class Character {
+
     //Attributes of character shared by all children
     private String name;
     private int hp;
@@ -54,8 +55,15 @@ public abstract class Character {
         this.baseAttack = baseAttack;
     }
 
+    @Override
+    public String toString() {
+        return "Name: " + name +
+                ", HP: " + hp +
+                ", Defence: " + defence +
+                ", Agility: " + agility +
+                ", Base Attack: " + baseAttack;
+    }
 
-    //getters
 
 
 
