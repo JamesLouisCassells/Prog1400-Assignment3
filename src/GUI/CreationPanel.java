@@ -15,10 +15,28 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
     private JTextField txtAgility;
     private JTextField txtAttack;
 
+    //Button variables
+    private JRadioButton radWarrior;
+    private JRadioButton radMage;
+    private JRadioButton radPaladin;
+
+    private JRadioButton radSword;
+    private JRadioButton radStaff;
+    private JRadioButton radHammer;
+
+    private JLabel lblClassImage;
+    private JLabel lblWeaponImage;
+
+    private JTextArea txtClassInfo;
+    private JTextArea txtWeaponInfo;
+
+    private JTextField txtWeaponAttack;
+    private JTextField txtWeaponWeight;
+
     public CreationPanel(GameFrame frame) { //constructor runs when the panel is created
         this.frame = frame; //stores the GameFrame reference
         setBackground(new Color(140,155,220)); //sets the background colour
-        setLayout(null); //sets to center
+        setLayout(null); //sets manual positioning
 
         //TITLE LABEL
         JLabel titleLabel = new JLabel("Character Generator"); //creates title text
@@ -83,35 +101,16 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         //REROLL BUTTON - allows the user to completely reroll their stats (method at bottom of page)
         JButton rerollButton = new JButton("Reroll"); //button that generates random stats
         rerollButton.setBounds(620, 360, 110, 35);
-        rerollButton.addActionListener(e -> rerollStats());
+        rerollButton.addActionListener(e -> rerollStats()); //when clicked this triggers method to reroll
         add(rerollButton);
 
-
-        //REROLL BUTTON LOGIC
-        rerollButton.addActionListener(e -> { //runs when the button is clicked
-
-            Random random = new Random(); //creates random number generator
-
-            //generate random stats
-            int hp = 50 + random.nextInt(51);
-            int defense = 10 + random.nextInt(31);
-            int agility = 10 + random.nextInt(31);
-            int attack = 10 + random.nextInt(21);
-
-            //update the text fields with the new numbers
-            txtHp.setText(String.valueOf(hp));
-            txtDefense.setText(String.valueOf(defense));
-            txtAgility.setText(String.valueOf(agility));
-            txtAttack.setText(String.valueOf(attack));
-
-        });
-        //call to rerollStats method within the constructor so it runs once at the beginnging (first time page opens)
+        //call to rerollStats method within the constructor so it runs once at the beginning (first time page opens)
         rerollStats();
     }
+
     //method to roll stats using random modifier
     public void rerollStats() {
         Random random = new Random();
-
         int hp = 1 + random.nextInt(100);
         int defense = 1 + random.nextInt(100);
         int agility = 1 + random.nextInt(100);

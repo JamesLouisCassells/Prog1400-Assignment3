@@ -52,7 +52,6 @@ public class GameFrame extends JFrame {
     }
 
     public void showBattlePanel() { //method to display battle screen
-
         battlePanel.loadBattleData(currentPlayer); //send the created player to battle screen
         cardLayout.show(mainPanel, "battle"); //switches to battle panel
     }

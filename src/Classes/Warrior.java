@@ -6,7 +6,7 @@ public class Warrior extends CharacterClass {
     public Warrior() {
         super("Warrior", "Plate", "images/Warrior.png");
     }
-}
+
     @Override
     public int getClassBonus() {
         return 7;
@@ -16,3 +16,5 @@ public class Warrior extends CharacterClass {
     public String toString() {
         return getClassName();
     }
+
+}

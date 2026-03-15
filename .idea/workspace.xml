@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04e3f9f9-0345-4cd8-9598-30d870b1bb8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/GUI/BattlePanel.java" afterDir="false" />
+    <list default="true" id="0453e311-6b2a-431f-850a-abaeef7f0285" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/BattlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/BattlePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CreationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CreationPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SplashPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SplashPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$OG 1400 - Assignment 3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/~$OG 1400 - Assignment 3.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,14 +30,11 @@
     "accountId": "cf859e91-915d-4776-87b9-f04ea3d8d6ae"
   }
 }]]></component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/openjdk-25.0.1/lib/src.zip!/java.desktop/javax/swing/ImageIcon.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 5
 }]]></component>
-  <component name="ProjectId" id="3AxMlnVRqNvZecM0vH08XncheWE" />
+  <component name="ProjectId" id="3AzCH7D1MnFPXyzqKJcKBVJaC5b" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,9 +44,7 @@
     "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/jlaca/nscc_y1/y1s2/PROG1400-OOP/Assignment3",
@@ -71,11 +60,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="04e3f9f9-0345-4cd8-9598-30d870b1bb8e" name="Changes" comment="" />
-      <created>1773529921924</created>
+      <changelist id="0453e311-6b2a-431f-850a-abaeef7f0285" name="Changes" comment="" />
+      <created>1773585922094</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1773529921924</updated>
+      <updated>1773585922094</updated>
     </task>
     <servers />
   </component>

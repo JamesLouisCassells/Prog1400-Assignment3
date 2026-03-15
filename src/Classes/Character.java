@@ -40,7 +40,7 @@ public abstract class Character {
     public void setDefence(int defence) {
         this.defence = defence;
     }
-    public int getagility() {
+    public int getAgility() {
         return agility;
     }
 
