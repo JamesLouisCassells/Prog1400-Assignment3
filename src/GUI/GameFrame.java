@@ -23,7 +23,7 @@ public class GameFrame extends JFrame {
     //gameframe constructor
     public GameFrame() {
         setTitle("Dragons n Dungeons Character Creation");
-        setSize(800, 700); //sizing of the panel
+        setSize(1000, 700); //sizing of the panel
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); //centers the frame
 

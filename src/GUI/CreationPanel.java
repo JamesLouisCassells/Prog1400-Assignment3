@@ -176,10 +176,10 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         JLabel agilityLabel = new JLabel("Agility"); //"" agility
         JLabel attackLabel = new JLabel("Base Attack"); //"" base attack
 
-        hpLabel.setBounds(500, 190, 120, 30);
-        defenseLabel.setBounds(500, 230, 120, 30);
-        agilityLabel.setBounds(500, 270, 120, 30);
-        attackLabel.setBounds(500, 310, 120, 30);
+        hpLabel.setBounds(500, 190, 80, 30);
+        defenseLabel.setBounds(500, 230, 80, 30);
+        agilityLabel.setBounds(500, 270, 80, 30);
+        attackLabel.setBounds(500, 310, 80, 30);
 
         add(hpLabel); //places this label on the panel (otherwise it just exists on code)
         add(defenseLabel);// ""
@@ -198,10 +198,10 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         txtAgility.setEditable(false);
         txtAttack.setEditable(false);
 
-        txtHp.setBounds(650,190,80,30);
-        txtDefense.setBounds(650,230,80,30);
-        txtAgility.setBounds(650,270,80,30);
-        txtAttack.setBounds(650,310,80,30);
+        txtHp.setBounds(650,190,20,30);
+        txtDefense.setBounds(650,230,20,30);
+        txtAgility.setBounds(650,270,20,30);
+        txtAttack.setBounds(650,310,20,30);
 
         add(txtHp); //adds those stats to the panels
         add(txtDefense);
@@ -225,8 +225,8 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         txtWeaponAttack = new JTextField();
         txtWeaponWeight = new JTextField();
 
-        txtWeaponAttack.setBounds(650, 490, 80, 30);
-        txtWeaponWeight.setBounds(650, 530, 80, 30);
+        txtWeaponAttack.setBounds(650, 490, 20, 30);
+        txtWeaponWeight.setBounds(650, 530, 20, 30);
 
         txtWeaponAttack.setEditable(false);
         txtWeaponWeight.setEditable(false);
@@ -272,7 +272,6 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         //this sets the default screen to warrior and sword (nicer to begin populated)
         radWarrior.setSelected(true);
         radWarrior.doClick();
-
         radSword.setSelected(true);
         radSword.doClick();
     }

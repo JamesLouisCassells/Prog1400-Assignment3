@@ -17,17 +17,28 @@ public class SplashPanel extends JPanel { //inherits from JPanel
         setBackground(new Color(138, 154, 91)); //sets the panel background colour to moss green
         setLayout(null); //uses manual positioning for components
 
+        //loads the splash image before the title so its always the background
+        ImageIcon splashIcon = new ImageIcon(getClass().getResource("/Images/Creation.png"));
+        //turns the icon into an Image so it can be resized
+        Image splashImg = splashIcon.getImage();
+        //rescales the image
+        Image scaledSplashImg = splashImg.getScaledInstance(1000, 700, Image.SCALE_SMOOTH);
+        //puts the scaled image back into an ImageIcon
+        ImageIcon scaledSplashIcon = new ImageIcon(scaledSplashImg);
+        //creates a label to hold the image
+        JLabel imageLabel = new JLabel(scaledSplashIcon);
+        //set to fill the entire panel
+        imageLabel.setBounds(0, 0, 1000, 700);
+        //adds the image to the panel
+        add(imageLabel);
+
         //Title
         JLabel titleLabel = new JLabel("Dragons and Dungeons!!"); //creates the title text
         titleLabel.setFont(new Font("Calibri", Font.BOLD, 28)); //this sets title font stylisation
         titleLabel.setBounds(240, 50, 350, 40); //sets title position and sizing
         add(titleLabel); //adds title to panel!
-        //Image
-        ImageIcon splashImage = new ImageIcon("/Images/Creation.png");
-        JLabel imageLabel = new JLabel(splashImage); //placeholder image label
-        imageLabel.setBounds(120, 120, 1900, 900); //sets image area position and size
-        add(imageLabel); //adds image placeholder to my panel
-        //Button
+
+        //Start Button
         JButton buildButton = new JButton("Build A Character"); //creates button to begin making a character
         buildButton.setFont(new Font("Calibri", Font.BOLD, 22)); //sets button font
         buildButton.setBounds(250, 460, 250, 40); //sets button position and size
