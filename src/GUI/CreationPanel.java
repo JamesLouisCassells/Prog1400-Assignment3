@@ -81,11 +81,6 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         add(radMage);
         add(radPaladin);
 
-        //Pictures for the classes
-        lblClassImage = new JLabel();
-        lblClassImage.setBounds(250, 190, 120, 120);
-        add(lblClassImage);
-
         //Box for class description
         txtClassInfo = new JTextArea();
         txtClassInfo.setBounds(80, 330, 350, 80);
@@ -127,16 +122,16 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         //Adding the weapon section to the panel
         JLabel weaponLabel = new JLabel("Select Your Weapon");
         weaponLabel.setFont(new Font("Arial", Font.BOLD, 20));
-        weaponLabel.setBounds(80, 430, 220, 30);
+        weaponLabel.setBounds(80, 410, 220, 30);
         add(weaponLabel);
 
         radSword = new JRadioButton("Sword");
         radStaff = new JRadioButton("Staff");
         radHammer = new JRadioButton("Hammer");
 
-        radSword.setBounds(100, 480, 120, 30);
-        radStaff.setBounds(100, 520, 120, 30);
-        radHammer.setBounds(100, 560, 120, 30);
+        radSword.setBounds(100, 450, 120, 30);
+        radStaff.setBounds(100, 490, 120, 30);
+        radHammer.setBounds(100, 530, 120, 30);
 
         radSword.setBackground(new Color(140, 155, 220));
         radStaff.setBackground(new Color(140, 155, 220));
@@ -153,12 +148,12 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
 
         //And the weapon images
         lblWeaponImage = new JLabel();
-        lblWeaponImage.setBounds(250, 470, 140, 110);
+        lblWeaponImage.setBounds(250, 440, 140, 110);
         add(lblWeaponImage);
 
         //and Weapon descriptions
         txtWeaponInfo = new JTextArea();
-        txtWeaponInfo.setBounds(80, 610, 350, 70);
+        txtWeaponInfo.setBounds(80, 590, 350, 60);
         txtWeaponInfo.setEditable(false);
         txtWeaponInfo.setLineWrap(true);
         txtWeaponInfo.setWrapStyleWord(true);
@@ -211,15 +206,15 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         //Weapon Stats
         JLabel weaponStatsLabel = new JLabel("Weapon Stats");
         weaponStatsLabel.setFont(new Font("Calibri", Font.BOLD, 20));
-        weaponStatsLabel.setBounds(500, 430, 180, 30);
+        weaponStatsLabel.setBounds(500, 410, 180, 30);
         add(weaponStatsLabel);
 
         JLabel weaponAttackLabel = new JLabel("Attack Modifier");
-        weaponAttackLabel.setBounds(500, 490, 140, 30);
+        weaponAttackLabel.setBounds(500, 470, 140, 30);
         add(weaponAttackLabel);
 
         JLabel weaponWeightLabel = new JLabel("Weight");
-        weaponWeightLabel.setBounds(500, 530, 140, 30);
+        weaponWeightLabel.setBounds(500, 510, 140, 30);
         add(weaponWeightLabel);
         //assigns the randomly rolled stats to the weapon
         txtWeaponAttack = new JTextField();
