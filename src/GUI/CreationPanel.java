@@ -3,6 +3,7 @@ package GUI; //places this class inside the GUI package
 import javax.swing.*; //imports Swing GUI components
 import java.awt.*; //imports Color and Font classes
 import java.util.Random; //imports Random for stat rerolling
+import Classes.*;
 
 public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one screen of the program)
 
@@ -255,6 +256,13 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         startBattleButton.setBounds(560, 610, 170, 40);
         add(startBattleButton);
 
+        //startBattleButton given action: redirect to battlePanel
+        startBattleButton.addActionListener(e -> {
+            Player player = createPlayerFromSelections();
+            frame.setCurrentPlayer(player);
+            frame.showBattlePanel();
+        });
+
         //Reroll Button - allows the user to completely reroll their stats (method at bottom of page)
         JButton rerollButton = new JButton("Reroll"); //button that generates random stats
         rerollButton.setBounds(620, 360, 110, 35);
@@ -283,5 +291,45 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         txtDefense.setText(String.valueOf(defense));
         txtAgility.setText(String.valueOf(agility));
         txtAttack.setText(String.valueOf(attack));
+    }
+
+    //method that builds a Player object using the selections from the creation screen
+    //this is pivotal because it builds what will be assembled on the BattlePanel
+    public Player createPlayerFromSelections() {
+        //get the name entered by the user
+        String name = txtName.getText();
+        //convert the stat text fields (which are strings) back into integers
+        int hp = Integer.parseInt(txtHp.getText());
+        int defence = Integer.parseInt(txtDefense.getText());
+        int agility = Integer.parseInt(txtAgility.getText());
+        int baseAttack = Integer.parseInt(txtAttack.getText());
+
+        //determine which character class radio button is selected
+        CharacterClass characterClass = null;
+        if (radWarrior.isSelected()) {
+            characterClass = new Warrior();
+        }
+        else if (radMage.isSelected()) {
+            characterClass = new Mage();
+        }
+        else if (radPaladin.isSelected()) {
+            characterClass = new Paladin();
+        }
+
+        //determine which weapon radio button is selected
+        Weapon weapon = null;
+        if (radSword.isSelected()) {
+            weapon = new Sword();
+        }
+        else if (radStaff.isSelected()) {
+            weapon = new Staff();
+        }
+        else if (radHammer.isSelected()) {
+            weapon = new Warhammer();
+        }
+        //create the Player object using all gathered data
+        Player player = new Player(name, hp, defence, agility, baseAttack, characterClass, weapon);
+        //return the created player so GameFrame can store it
+        return player;
     }
 }

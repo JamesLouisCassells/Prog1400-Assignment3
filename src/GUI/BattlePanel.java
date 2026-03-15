@@ -1,85 +1,156 @@
-package GUI;
+package GUI; //places this class inside the GUI package
 
-import Classes.*;
-import javax.swing.*;
-import java.awt.*;
-import java.util.Random;
+import Classes.*; //imports all the character classes
+import javax.swing.*; //imports swing GUI components
+import java.awt.*; //imports colour and font classes
+import java.util.Random; //imports random for monster generation
 
-public class BattlePanel extends JPanel {
+public class BattlePanel extends JPanel { //BattlePanel is another screen of the program
+    private GameFrame frame; //reference to GameFrame so we can switch screens
+    //labels for player and monster titles
+    private JLabel lblPlayerTitle;
+    private JLabel lblMonsterTitle;
+    //labels to hold images
+    private JLabel lblPlayerImage;
+    private JLabel lblMonsterImage;
+    //text area that shows the battle summary
+    private JTextArea txtBattleSummary;
 
-    private GameFrame frame;
-    private JTextArea summaryArea;
-
-    public BattlePanel(GameFrame frame) {
+    public BattlePanel(GameFrame frame) { //constructor runs when panel is created
         this.frame = frame;
-        setLayout(null); //layout is already determined as card
-        setBackground(Color.red);
+        setLayout(null); //manual layout (same as CreationPanel)
+        setBackground(new Color(140,155,220)); //same blue background as other screen
 
-        //creating a title for the panel
-        JLabel titleLabel = new JLabel("Battle Summary");
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        titleLabel.setBounds(280, 30, 250, 40);
-        add(titleLabel); //adds this title to the panel
-        //Summary area creation
-        summaryArea = new JTextArea();
-        summaryArea.setBounds(100, 100, 600, 300);
-        summaryArea.setEditable(false); //the user cannot change this area
-        summaryArea.setFont(new Font("Monospaced", Font.PLAIN, 16));
-        add(summaryArea);
+        //TITLE LABEL
+        JLabel titleLabel = new JLabel("Battle To The Death!"); //title of battle screen
+        titleLabel.setFont(new Font("Calibri", Font.BOLD, 22)); //font styling
+        titleLabel.setBounds(60, 40, 250, 30); //position of title
+        add(titleLabel); //adds title to panel
 
-        //Return to previous screen button
-        JButton backButton = new JButton("Back to Creation");
-        backButton.setFont(new Font("Times New Roman", Font.BOLD, 18));
-        backButton.setBounds(260, 450, 220, 40);
-        backButton.addActionListener(e -> frame.showCreationPanel()); //give the button an action when clicked
-        add(backButton);
+        //PLAYER TITLE
+        lblPlayerTitle = new JLabel("Player:");
+        lblPlayerTitle.setFont(new Font("Calibri", Font.BOLD, 18));
+        lblPlayerTitle.setBounds(140, 110, 200, 30);
+        add(lblPlayerTitle);
+
+        //MONSTER TITLE
+        lblMonsterTitle = new JLabel("Monster:");
+        lblMonsterTitle.setFont(new Font("Calibri", Font.BOLD, 18));
+        lblMonsterTitle.setBounds(390, 110, 200, 30);
+        add(lblMonsterTitle);
+
+        //PLAYER IMAGE
+        lblPlayerImage = new JLabel(); //label that will hold player picture
+        lblPlayerImage.setBounds(170, 170, 120, 120);
+        add(lblPlayerImage);
+
+        //MONSTER IMAGE
+        lblMonsterImage = new JLabel(); //label that will hold monster picture
+        lblMonsterImage.setBounds(410, 170, 150, 120);
+        add(lblMonsterImage);
+
+        //TEXT AREA FOR BATTLE SUMMARY
+        txtBattleSummary = new JTextArea(); //area that displays player + monster stats
+        txtBattleSummary.setBounds(40, 330, 630, 210);
+        txtBattleSummary.setEditable(false); //user cannot edit
+        txtBattleSummary.setLineWrap(true); //wraps text automatically
+        txtBattleSummary.setWrapStyleWord(true); //wraps on whole words
+        txtBattleSummary.setFont(new Font("Calibri", Font.BOLD, 16));
+        txtBattleSummary.setBackground(Color.WHITE); //white background like mockup
+        txtBattleSummary.setForeground(new Color(180,200,225)); //light blue text
+        add(txtBattleSummary);
+
+        //PLAY AGAIN BUTTON
+        JButton playAgainButton = new JButton("Play Again");
+        playAgainButton.setFont(new Font("Calibri", Font.BOLD, 16));
+        playAgainButton.setBounds(265, 560, 200, 35);
+        //when clicked it returns to the character creation screen
+        playAgainButton.addActionListener(e -> frame.showCreationPanel());
+        add(playAgainButton);
     }
-    //Sequence for importing created player
+
+    //method called when the battle panel loads
     public void loadBattleData(Player player) {
+        //if player somehow does not exist
         if (player == null) {
-            summaryArea.setText("No player created yet."); //if no player created yet it returns to previous screen
+            txtBattleSummary.setText("No player created yet.");
             return;
         }
-        //generates a monster, names it monster
+
+        //generate a monster opponent
         Monster monster = generateMonster();
+        //update labels showing player and monster names
+        lblPlayerTitle.setText("Player: " + player.getCharacterClass());
+        lblMonsterTitle.setText("Monster: " + monster.getName());
+        //set images for player and monster
+        setPlayerImage(player);
+        setMonsterImage(monster);
+        //build the battle summary string
+        String output =
+                "Player: " + player.getName() + "\n"
+                        + "-------------------------\n\n"
+                        + "Class: " + player.getCharacterClass() + "\n\n"
+                        + "HP: " + player.getHp()
+                        + "        Defense: " + player.getDefence()
+                        + "        Agility: " + player.getAgility()
+                        + "        Base Attack: " + player.getBaseAttack() + "\n"
+                        + "Weapon: " + player.getWeapon() + "\n\n"
 
-        //saves the lengthy string info to the variable output
-        //calls on methods created throughout the classes with getters and setters
-        String output = "PLAYER\n"
-                + "-------------------------\n"
-                + "Name: " + player.getName() + "\n"
-                + "Class: " + player.getCharacterClass() + "\n"
-                + "Weapon: " + player.getWeapon() + "\n"
-                + "HP: " + player.getHp() + "\n"
-                + "Defence: " + player.getDefence() + "\n"
-                + "Agility: " + player.getAgility() + "\n"
-                + "Base Attack: " + player.getBaseAttack() + "\n"
-                + "Total Attack: " + player.calculateAttack() + "\n\n"
-                + "MONSTER\n"
-                + "-------------------------\n"
-                + "Name: " + monster.getName() + "\n"
-                + "HP: " + monster.getHp() + "\n"
-                + "Defence: " + monster.getDefence() + "\n"
-                + "Agility: " + monster.getAgility() + "\n"
-                + "Base Attack: " + monster.getBaseAttack();
-
-        summaryArea.setText(output); //puts that blurb in the summaryArea box on the panel
+                        + "Monster: " + monster.getName() + "\n"
+                        + "-------------------------\n\n"
+                        + "HP: " + monster.getHp()
+                        + "        Defense: " + monster.getDefence()
+                        + "        Agility: " + monster.getAgility()
+                        + "        Base Attack: " + monster.getBaseAttack();
+        //display the final text inside the summary area
+        txtBattleSummary.setText(output);
     }
 
-    //method to create a monster with random stats
+    //method to randomly generate a monster opponent
     public Monster generateMonster() {
-        Random random = new Random(); //assigning random a variable
+        Random random = new Random(); //random object
+        //array of monster names
+        String[] monsterNames = {"Ragnaros", "Gruul", "Neltharion", "Jailer"};
+        //randomly pick one name
+        String name = monsterNames[random.nextInt(monsterNames.length)];
 
-        String[] monsterNames = {"Ragnaros", "Gruul", "Neltharion", "Jailer"};//string array of monster names
-        String name = monsterNames[random.nextInt(monsterNames.length)]; //randomly chooses one
-
+        //generate random stats
         int hp = 1 + random.nextInt(100);
         int defence = 1 + random.nextInt(100);
         int agility = 1 + random.nextInt(100);
         int baseAttack = 1 + random.nextInt(100);
-
+        //return the monster object
         return new Monster(name, hp, defence, agility, baseAttack);
     }
+
+    //method to set the correct player image depending on class
+    private void setPlayerImage(Player player) {
+        String className = player.getCharacterClass().toString();
+        ImageIcon icon = null;
+        if (className.equalsIgnoreCase("Warrior")) {
+            icon = new ImageIcon(getClass().getResource("/Images/Warrior.png"));
+        }
+        else if (className.equalsIgnoreCase("Mage")) {
+            icon = new ImageIcon(getClass().getResource("/Images/Mage.png"));
+        }
+        else if (className.equalsIgnoreCase("Paladin")) {
+            icon = new ImageIcon(getClass().getResource("/Images/Paladin.png"));
+        }
+
+        if (icon != null) {
+
+            //scale image so it fits the UI
+            Image img = icon.getImage();
+            Image scaled = img.getScaledInstance(120,120,Image.SCALE_SMOOTH);
+            lblPlayerImage.setIcon(new ImageIcon(scaled));
+        }
+    }
+
+    //method to set the monster image
+    private void setMonsterImage(Monster monster) {
+        ImageIcon icon = new ImageIcon("src/Images/monster.jpg");
+        Image img = icon.getImage();
+        Image scaled = img.getScaledInstance(150,120,Image.SCALE_SMOOTH);
+        lblMonsterImage.setIcon(new ImageIcon(scaled));
+    }
 }
-
-
