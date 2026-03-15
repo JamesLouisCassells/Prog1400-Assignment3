@@ -23,9 +23,9 @@ public class SplashPanel extends JPanel { //inherits from JPanel
         titleLabel.setBounds(240, 50, 350, 40); //sets title position and sizing
         add(titleLabel); //adds title to panel!
         //Image
-        ImageIcon splashImage = new ImageIcon("images/Creation.png");
+        ImageIcon splashImage = new ImageIcon("/Images/Creation.png");
         JLabel imageLabel = new JLabel(splashImage); //placeholder image label
-        imageLabel.setBounds(120, 120, 550, 280); //sets image area position and size
+        imageLabel.setBounds(120, 120, 1900, 900); //sets image area position and size
         add(imageLabel); //adds image placeholder to my panel
         //Button
         JButton buildButton = new JButton("Build A Character"); //creates button to begin making a character

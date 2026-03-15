@@ -94,20 +94,33 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         txtClassInfo.setWrapStyleWord(true);
         add(txtClassInfo);
 
+        lblClassImage = new JLabel();
+        lblClassImage.setBounds(250, 190, 120, 120);
+        add(lblClassImage);
+
         //Blurb actions and descriptions
         radWarrior.addActionListener(e -> {
             txtClassInfo.setText("Warriors like Payo are strong fighters with balanced stats.");
-            lblClassImage.setIcon(new ImageIcon("images/warrior.png"));
+            ImageIcon icon = new ImageIcon(getClass().getResource("/Images/Warrior.png"));
+            Image img = icon.getImage();
+            Image scaled = img.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+            lblClassImage.setIcon(new ImageIcon(scaled));
         });
 
         radMage.addActionListener(e -> {
             txtClassInfo.setText("Mages like Xaryu use magic and gain a class bonus.");
-            lblClassImage.setIcon(new ImageIcon("images/mage.png"));
+            ImageIcon icon = new ImageIcon(getClass().getResource("/Images/Mage.png"));
+            Image img = icon.getImage();
+            Image scaled = img.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+            lblClassImage.setIcon(new ImageIcon(scaled));;
         });
 
         radPaladin.addActionListener(e -> {
             txtClassInfo.setText("Paladins like Esfand are tougher and more defensive.");
-            lblClassImage.setIcon(new ImageIcon("images/paladin.png"));
+            ImageIcon icon = new ImageIcon(getClass().getResource("/Images/Paladin.png"));
+            Image img = icon.getImage();
+            Image scaled = img.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+            lblClassImage.setIcon(new ImageIcon(scaled));
         });
 
         //Adding the weapon section to the panel
@@ -150,13 +163,13 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         txtWeaponInfo.setWrapStyleWord(true);
         add(txtWeaponInfo);
 
-        //STATS SECTION TITLE
+        //Stats Section Title
         JLabel statsLabel = new JLabel("Character Stats"); //label for the stats area
         statsLabel.setFont(new Font("Calibri", Font.BOLD, 20));
         statsLabel.setBounds(500, 140, 180, 30); //placing it on the right of the panel
         add(statsLabel);
 
-        //STAT LABELS
+        //Stat labels
         JLabel hpLabel = new JLabel("Hit Points"); //label for HP
         JLabel defenseLabel = new JLabel("Defense"); //label for defense
         JLabel agilityLabel = new JLabel("Agility"); //"" agility
@@ -172,7 +185,7 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         add(agilityLabel);
         add(attackLabel);
 
-        //STAT INPUT FIELDS - taking input from the user for their stats
+        //Stat Input Fields - taking input from the user for their stats
         txtHp = new JTextField(); //text field for HP value
         txtDefense = new JTextField(); //text field for defense
         txtAgility = new JTextField(); //text field for agility
@@ -222,21 +235,21 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         //sword blurb comes up when the sword is clicked etc etc
         radSword.addActionListener(e -> {
             txtWeaponInfo.setText("A sword is a good all-round weapon.");
-            lblWeaponImage.setIcon(new ImageIcon("images/sword.png"));
+            lblWeaponImage.setIcon(new ImageIcon("/Images/sword.png"));
             txtWeaponAttack.setText("5");
             txtWeaponWeight.setText("10");
         });
 
         radStaff.addActionListener(e -> {
             txtWeaponInfo.setText("A staff works well for magic users.");
-            lblWeaponImage.setIcon(new ImageIcon("images/staff.png"));
+            lblWeaponImage.setIcon(new ImageIcon("/Images/staff.png"));
             txtWeaponAttack.setText("3");
             txtWeaponWeight.setText("6");
         });
 
         radHammer.addActionListener(e -> {
             txtWeaponInfo.setText("A hammer is heavy but powerful.");
-            lblWeaponImage.setIcon(new ImageIcon("images/hammer.png"));
+            lblWeaponImage.setIcon(new ImageIcon("/Images/hammer.png"));
             txtWeaponAttack.setText("8");
             txtWeaponWeight.setText("15");
         });
@@ -246,7 +259,7 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         startBattleButton.setBounds(560, 610, 170, 40);
         add(startBattleButton);
 
-        //REROLL BUTTON - allows the user to completely reroll their stats (method at bottom of page)
+        //Reroll Button - allows the user to completely reroll their stats (method at bottom of page)
         JButton rerollButton = new JButton("Reroll"); //button that generates random stats
         rerollButton.setBounds(620, 360, 110, 35);
         rerollButton.addActionListener(e -> rerollStats()); //when clicked this triggers method to reroll
