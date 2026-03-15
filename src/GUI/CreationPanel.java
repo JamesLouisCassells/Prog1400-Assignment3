@@ -8,7 +8,7 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
 
     private GameFrame frame; //reference to the main window so we can switch screens later
 
-    //text fields for user input
+    //variables for user stats
     private JTextField txtName;
     private JTextField txtHp;
     private JTextField txtDefense;

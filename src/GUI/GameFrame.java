@@ -14,11 +14,11 @@ public class GameFrame extends JFrame {
     private CardLayout cardLayout; //layout manager used to switch between screens
     private JPanel mainPanel; //main container panel that holds all the screens
 
-    //creating three ui screen variables
+    //creating three ui card variables
     private SplashPanel splashPanel; //first title screen
     private CreationPanel creationPanel; //character creation panel
     private BattlePanel battlePanel; //battle summary screen
-    private Player currentPlayer; //stores the player created in creation screen
+    private Player currentPlayer; //stores the player object created in creation screen
 
     //gameframe constructor
     public GameFrame() {
