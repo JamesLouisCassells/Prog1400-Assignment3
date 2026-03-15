@@ -54,6 +54,102 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         txtName.setBounds(220, 80, 180, 30);
         add(txtName); //adds this to the panel
 
+        //CHARACTER TYPE SECTION
+        JLabel classLabel = new JLabel("Character Type");
+        classLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        classLabel.setBounds(80, 150, 180, 30);
+        add(classLabel);
+        //class buttons
+        radWarrior = new JRadioButton("Warrior");
+        radMage = new JRadioButton("Mage");
+        radPaladin = new JRadioButton("Paladin");
+        //locatioon of class buttons
+        radWarrior.setBounds(100, 200, 120, 30);
+        radMage.setBounds(100, 240, 120, 30);
+        radPaladin.setBounds(100, 280, 120, 30);
+        //class button colours
+        radWarrior.setBackground(new Color(140, 155, 220));
+        radMage.setBackground(new Color(140, 155, 220));
+        radPaladin.setBackground(new Color(140, 155, 220));
+        //object of buttons created
+        ButtonGroup classGroup = new ButtonGroup();
+        classGroup.add(radWarrior);
+        classGroup.add(radMage);
+        classGroup.add(radPaladin);
+        //adding the buttons to the panel
+        add(radWarrior);
+        add(radMage);
+        add(radPaladin);
+
+        //Pictures for the classes
+        lblClassImage = new JLabel();
+        lblClassImage.setBounds(250, 190, 120, 120);
+        add(lblClassImage);
+
+        //Box for class description
+        txtClassInfo = new JTextArea();
+        txtClassInfo.setBounds(80, 330, 350, 80);
+        txtClassInfo.setEditable(false);
+        txtClassInfo.setLineWrap(true);
+        txtClassInfo.setWrapStyleWord(true);
+        add(txtClassInfo);
+
+        //Blurb actions and descriptions
+        radWarrior.addActionListener(e -> {
+            txtClassInfo.setText("Warriors like Payo are strong fighters with balanced stats.");
+            lblClassImage.setIcon(new ImageIcon("images/warrior.png"));
+        });
+
+        radMage.addActionListener(e -> {
+            txtClassInfo.setText("Mages like Xaryu use magic and gain a class bonus.");
+            lblClassImage.setIcon(new ImageIcon("images/mage.png"));
+        });
+
+        radPaladin.addActionListener(e -> {
+            txtClassInfo.setText("Paladins like Esfand are tougher and more defensive.");
+            lblClassImage.setIcon(new ImageIcon("images/paladin.png"));
+        });
+
+        //Adding the weapon section to the panel
+        JLabel weaponLabel = new JLabel("Select Your Weapon");
+        weaponLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        weaponLabel.setBounds(80, 430, 220, 30);
+        add(weaponLabel);
+
+        radSword = new JRadioButton("Sword");
+        radStaff = new JRadioButton("Staff");
+        radHammer = new JRadioButton("Hammer");
+
+        radSword.setBounds(100, 480, 120, 30);
+        radStaff.setBounds(100, 520, 120, 30);
+        radHammer.setBounds(100, 560, 120, 30);
+
+        radSword.setBackground(new Color(140, 155, 220));
+        radStaff.setBackground(new Color(140, 155, 220));
+        radHammer.setBackground(new Color(140, 155, 220));
+        //same idea as with classes: an object of weapons created
+        ButtonGroup weaponGroup = new ButtonGroup();
+        weaponGroup.add(radSword);
+        weaponGroup.add(radStaff);
+        weaponGroup.add(radHammer);
+        //weapons added to the panel
+        add(radSword);
+        add(radStaff);
+        add(radHammer);
+
+        //And the weapon images
+        lblWeaponImage = new JLabel();
+        lblWeaponImage.setBounds(250, 470, 140, 110);
+        add(lblWeaponImage);
+
+        //and Weapon descriptions
+        txtWeaponInfo = new JTextArea();
+        txtWeaponInfo.setBounds(80, 610, 350, 70);
+        txtWeaponInfo.setEditable(false);
+        txtWeaponInfo.setLineWrap(true);
+        txtWeaponInfo.setWrapStyleWord(true);
+        add(txtWeaponInfo);
+
         //STATS SECTION TITLE
         JLabel statsLabel = new JLabel("Character Stats"); //label for the stats area
         statsLabel.setFont(new Font("Calibri", Font.BOLD, 20));
@@ -98,6 +194,58 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         add(txtAgility);
         add(txtAttack);
 
+        //Weapon Stats
+        JLabel weaponStatsLabel = new JLabel("Weapon Stats");
+        weaponStatsLabel.setFont(new Font("Calibri", Font.BOLD, 20));
+        weaponStatsLabel.setBounds(500, 430, 180, 30);
+        add(weaponStatsLabel);
+
+        JLabel weaponAttackLabel = new JLabel("Attack Modifier");
+        weaponAttackLabel.setBounds(500, 490, 140, 30);
+        add(weaponAttackLabel);
+
+        JLabel weaponWeightLabel = new JLabel("Weight");
+        weaponWeightLabel.setBounds(500, 530, 140, 30);
+        add(weaponWeightLabel);
+        //assigns the randomly rolled stats to the weapon
+        txtWeaponAttack = new JTextField();
+        txtWeaponWeight = new JTextField();
+
+        txtWeaponAttack.setBounds(650, 490, 80, 30);
+        txtWeaponWeight.setBounds(650, 530, 80, 30);
+
+        txtWeaponAttack.setEditable(false);
+        txtWeaponWeight.setEditable(false);
+        //adds the weapon stats to the panel
+        add(txtWeaponAttack);
+        add(txtWeaponWeight);
+        //sword blurb comes up when the sword is clicked etc etc
+        radSword.addActionListener(e -> {
+            txtWeaponInfo.setText("A sword is a good all-round weapon.");
+            lblWeaponImage.setIcon(new ImageIcon("images/sword.png"));
+            txtWeaponAttack.setText("5");
+            txtWeaponWeight.setText("10");
+        });
+
+        radStaff.addActionListener(e -> {
+            txtWeaponInfo.setText("A staff works well for magic users.");
+            lblWeaponImage.setIcon(new ImageIcon("images/staff.png"));
+            txtWeaponAttack.setText("3");
+            txtWeaponWeight.setText("6");
+        });
+
+        radHammer.addActionListener(e -> {
+            txtWeaponInfo.setText("A hammer is heavy but powerful.");
+            lblWeaponImage.setIcon(new ImageIcon("images/hammer.png"));
+            txtWeaponAttack.setText("8");
+            txtWeaponWeight.setText("15");
+        });
+        //Button to actually begin the battle
+        JButton startBattleButton = new JButton("Start Battle");
+        startBattleButton.setFont(new Font("Calibri", Font.BOLD, 20));
+        startBattleButton.setBounds(560, 610, 170, 40);
+        add(startBattleButton);
+
         //REROLL BUTTON - allows the user to completely reroll their stats (method at bottom of page)
         JButton rerollButton = new JButton("Reroll"); //button that generates random stats
         rerollButton.setBounds(620, 360, 110, 35);
@@ -106,6 +254,13 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
 
         //call to rerollStats method within the constructor so it runs once at the beginning (first time page opens)
         rerollStats();
+
+        //this sets the default screen to warrior and sword (nicer to begin populated)
+        radWarrior.setSelected(true);
+        radWarrior.doClick();
+
+        radSword.setSelected(true);
+        radSword.doClick();
     }
 
     //method to roll stats using random modifier
