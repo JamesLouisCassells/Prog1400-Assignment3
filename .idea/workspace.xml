@@ -3,25 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0453e311-6b2a-431f-850a-abaeef7f0285" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Cleric.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Creation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Paladin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Warrior.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dagger.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dd_1400x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dwarf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/fighter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/hammer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/mage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/monster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wizard.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/CreationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/CreationPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/GameFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/SplashPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/SplashPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CreationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CreationPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SplashPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SplashPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -94,6 +94,7 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         txtClassInfo.setWrapStyleWord(true);
         add(txtClassInfo);
 
+        //setting parameters for my class and weapon pictures when radio button is selected
         lblClassImage = new JLabel();
         lblClassImage.setBounds(250, 190, 120, 120);
         add(lblClassImage);
@@ -235,21 +236,21 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         //sword blurb comes up when the sword is clicked etc etc
         radSword.addActionListener(e -> {
             txtWeaponInfo.setText("A sword is a good all-round weapon.");
-            lblWeaponImage.setIcon(new ImageIcon("/Images/sword.png"));
+            lblWeaponImage.setIcon(new ImageIcon("src/Images/sword.png"));
             txtWeaponAttack.setText("5");
             txtWeaponWeight.setText("10");
         });
 
         radStaff.addActionListener(e -> {
             txtWeaponInfo.setText("A staff works well for magic users.");
-            lblWeaponImage.setIcon(new ImageIcon("/Images/staff.png"));
+            lblWeaponImage.setIcon(new ImageIcon("src/Images/staff.png"));
             txtWeaponAttack.setText("3");
             txtWeaponWeight.setText("6");
         });
 
         radHammer.addActionListener(e -> {
             txtWeaponInfo.setText("A hammer is heavy but powerful.");
-            lblWeaponImage.setIcon(new ImageIcon("/Images/hammer.png"));
+            lblWeaponImage.setIcon(new ImageIcon("src/Images/hammer.png"));
             txtWeaponAttack.setText("8");
             txtWeaponWeight.setText("15");
         });
