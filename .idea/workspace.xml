@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04e3f9f9-0345-4cd8-9598-30d870b1bb8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Assignment3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment3A.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment3A/Assignment3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/CharacterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/CharacterClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Cleric.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Dagger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Hammer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Paladin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Wizard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CreationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CreationPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +42,7 @@
     "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
