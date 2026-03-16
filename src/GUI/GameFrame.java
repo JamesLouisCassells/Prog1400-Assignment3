@@ -1,8 +1,10 @@
 //pseudo for this class:
+//Interface behaviour as a designer:
 // - creates the window
 // - creates the three screens
-// - stores the current player
-// - switches between panels
+// - stores the current player object
+// - switches between panels using showCreationPanel() and showBattlePanel()
+// panels handle their own interface logic but gameFrame manages the movement between them
 
 package GUI;
 import Classes.Player;

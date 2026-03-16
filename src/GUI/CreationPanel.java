@@ -1,3 +1,27 @@
+//pseudo for this class:
+// Function of this class for the end user:
+// - user enters name
+// - user chooses class
+// - stores the current player object
+// - switches between panels
+
+//Interface behaviour as a designer:
+//- Uses radio buttons grouped together so only one class and weapon can be selected
+//- Displays class and weapon descriptions when selections change
+//- Displays images for the selected class and weapon
+//- Images are loaded and scaled so they fit the GUI properly
+
+//How the stats system works
+// imported random function which generates with a reroll button (and runs once on page opening)
+// Stats are non-editable for users by design
+
+//Game Flow design
+//- When the Start Battle button is pressed, the panel reads all user selections
+//- A Player object is created using that data
+//- The Player is sent to GameFrame
+//- GameFrame switches the screen to the BattlePanel
+
+
 package GUI; //places this class inside the GUI package
 
 import javax.swing.*; //imports Swing GUI components
@@ -34,21 +58,26 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
     private JTextField txtWeaponAttack;
     private JTextField txtWeaponWeight;
 
+    private Image backgroundImage;
+
     public CreationPanel(GameFrame frame) { //constructor runs when the panel is created
         this.frame = frame; //stores the GameFrame reference
-        setBackground(new Color(140,155,220)); //sets the background colour
+        backgroundImage = new ImageIcon("src/Images/battle.png").getImage();
+        setOpaque(false);
         setLayout(null); //sets manual positioning
 
         //TITLE LABEL
         JLabel titleLabel = new JLabel("Character Generator"); //creates title text
         titleLabel.setFont(new Font("Calibri", Font.BOLD, 26)); //sets the font style
         titleLabel.setBounds(260, 20, 300, 40); //sets position and size
+        titleLabel.setForeground(Color.WHITE);
         add(titleLabel); //adds the label to the panel
 
         //NAME SECTION
         JLabel nameLabel = new JLabel("Enter Name"); //label describing the name field
         nameLabel.setFont(new Font("Calibri", Font.BOLD, 20));
         nameLabel.setBounds(80, 80, 150, 30);
+        nameLabel.setForeground(Color.WHITE);
         add(nameLabel); //adds this box to the panel
 
         txtName = new JTextField(); //creates text field where user types their name
@@ -59,12 +88,13 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         JLabel classLabel = new JLabel("Character Type");
         classLabel.setFont(new Font("Arial", Font.BOLD, 20));
         classLabel.setBounds(80, 150, 180, 30);
+        classLabel.setForeground(Color.WHITE);
         add(classLabel);
         //class buttons
         radWarrior = new JRadioButton("Warrior");
         radMage = new JRadioButton("Mage");
         radPaladin = new JRadioButton("Paladin");
-        //locatioon of class buttons
+        //location of class buttons
         radWarrior.setBounds(100, 200, 120, 30);
         radMage.setBounds(100, 240, 120, 30);
         radPaladin.setBounds(100, 280, 120, 30);
@@ -84,7 +114,7 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
 
         //Box for class description
         txtClassInfo = new JTextArea();
-        txtClassInfo.setBounds(80, 330, 350, 80);
+        txtClassInfo.setBounds(80, 330, 350, 60);
         txtClassInfo.setEditable(false);
         txtClassInfo.setLineWrap(true);
         txtClassInfo.setWrapStyleWord(true);
@@ -98,25 +128,31 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         //Blurb actions and descriptions
         radWarrior.addActionListener(e -> {
             txtClassInfo.setText("Warriors like Payo are strong fighters with balanced stats.");
+            txtClassInfo.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
+            txtWeaponInfo.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
             ImageIcon icon = new ImageIcon(getClass().getResource("/Images/Warrior.png"));
             Image img = icon.getImage();
-            Image scaled = img.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+            Image scaled = img.getScaledInstance(135, 135, Image.SCALE_SMOOTH);
             lblClassImage.setIcon(new ImageIcon(scaled));
         });
 
         radMage.addActionListener(e -> {
             txtClassInfo.setText("Mages like Xaryu use magic and gain a class bonus.");
+            txtClassInfo.setBorder(BorderFactory.createLineBorder(Color.MAGENTA));
+            txtWeaponInfo.setBorder(BorderFactory.createLineBorder(Color.MAGENTA));
             ImageIcon icon = new ImageIcon(getClass().getResource("/Images/Mage.png"));
             Image img = icon.getImage();
-            Image scaled = img.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+            Image scaled = img.getScaledInstance(135, 135, Image.SCALE_SMOOTH);
             lblClassImage.setIcon(new ImageIcon(scaled));;
         });
 
         radPaladin.addActionListener(e -> {
             txtClassInfo.setText("Paladins like Esfand are tougher and more defensive.");
+            txtClassInfo.setBorder(BorderFactory.createLineBorder(Color.PINK));
+            txtWeaponInfo.setBorder(BorderFactory.createLineBorder(Color.PINK));
             ImageIcon icon = new ImageIcon(getClass().getResource("/Images/Paladin.png"));
             Image img = icon.getImage();
-            Image scaled = img.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+            Image scaled = img.getScaledInstance(135, 135, Image.SCALE_SMOOTH);
             lblClassImage.setIcon(new ImageIcon(scaled));
         });
 
@@ -124,6 +160,7 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         JLabel weaponLabel = new JLabel("Select Your Weapon");
         weaponLabel.setFont(new Font("Arial", Font.BOLD, 20));
         weaponLabel.setBounds(80, 410, 220, 30);
+        weaponLabel.setForeground(Color.WHITE);
         add(weaponLabel);
 
         radSword = new JRadioButton("Sword");
@@ -164,6 +201,7 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         JLabel statsLabel = new JLabel("Character Stats"); //label for the stats area
         statsLabel.setFont(new Font("Calibri", Font.BOLD, 20));
         statsLabel.setBounds(500, 140, 180, 30); //placing it on the right of the panel
+        statsLabel.setForeground(Color.WHITE);
         add(statsLabel);
 
         //Stat labels
@@ -176,6 +214,11 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         defenseLabel.setBounds(500, 230, 80, 30);
         agilityLabel.setBounds(500, 270, 80, 30);
         attackLabel.setBounds(500, 310, 80, 30);
+
+        hpLabel.setForeground(Color.WHITE);
+        defenseLabel.setForeground(Color.WHITE);
+        agilityLabel.setForeground(Color.WHITE);
+        attackLabel.setForeground(Color.WHITE);
 
         add(hpLabel); //places this label on the panel (otherwise it just exists on code)
         add(defenseLabel);// ""
@@ -193,11 +236,16 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         txtDefense.setEditable(false);
         txtAgility.setEditable(false);
         txtAttack.setEditable(false);
-
-        txtHp.setBounds(650,190,20,30);
-        txtDefense.setBounds(650,230,20,30);
-        txtAgility.setBounds(650,270,20,30);
-        txtAttack.setBounds(650,310,20,30);
+        //setBounds controls where the box appears on the panel and how big/small it is
+        txtHp.setBounds(650,190,40,30);
+        txtDefense.setBounds(650,230,40,30);
+        txtAgility.setBounds(650,270,40,30);
+        txtAttack.setBounds(650,310,40,30);
+        //setHorizont controls how the number is positioned WITHIN the box!
+        txtHp.setHorizontalAlignment(JTextField.CENTER);
+        txtDefense.setHorizontalAlignment(JTextField.CENTER);
+        txtAgility.setHorizontalAlignment(JTextField.CENTER);
+        txtAttack.setHorizontalAlignment(JTextField.CENTER);
 
         add(txtHp); //adds those stats to the panels
         add(txtDefense);
@@ -208,21 +256,27 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         JLabel weaponStatsLabel = new JLabel("Weapon Stats");
         weaponStatsLabel.setFont(new Font("Calibri", Font.BOLD, 20));
         weaponStatsLabel.setBounds(500, 410, 180, 30);
+        weaponStatsLabel.setForeground(Color.WHITE);
         add(weaponStatsLabel);
 
         JLabel weaponAttackLabel = new JLabel("Attack Modifier");
         weaponAttackLabel.setBounds(500, 470, 140, 30);
+        weaponAttackLabel.setForeground(Color.WHITE);
         add(weaponAttackLabel);
 
         JLabel weaponWeightLabel = new JLabel("Weight");
         weaponWeightLabel.setBounds(500, 510, 140, 30);
+        weaponWeightLabel.setForeground(Color.WHITE);
         add(weaponWeightLabel);
         //assigns the randomly rolled stats to the weapon
         txtWeaponAttack = new JTextField();
         txtWeaponWeight = new JTextField();
-
+        //location of the boxes on the panel
         txtWeaponAttack.setBounds(650, 490, 20, 30);
         txtWeaponWeight.setBounds(650, 530, 20, 30);
+        //positioning within the box
+        txtWeaponAttack.setHorizontalAlignment(JTextField.CENTER);
+        txtWeaponWeight.setHorizontalAlignment(JTextField.CENTER);
 
         txtWeaponAttack.setEditable(false);
         txtWeaponWeight.setEditable(false);
@@ -238,8 +292,8 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         });
 
         radStaff.addActionListener(e -> {
-            txtWeaponInfo.setText("A staff works well for magic users.");
-            lblWeaponImage.setIcon(new ImageIcon("src/Images/staff.png"));
+            txtWeaponInfo.setText("A dagger works well for magic users.");
+            lblWeaponImage.setIcon(new ImageIcon("src/Images/dagger.png"));
             txtWeaponAttack.setText("3");
             txtWeaponWeight.setText("6");
         });
@@ -331,5 +385,11 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         Player player = new Player(name, hp, defence, agility, baseAttack, characterClass, weapon);
         //return the created player so GameFrame can store it
         return player;
+    }
+    //google helped me with this part, i wanted to set a different background and this is the override i needed to do so
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
 }

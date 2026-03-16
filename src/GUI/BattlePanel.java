@@ -1,3 +1,12 @@
+//pseudo for this class:
+// Function of this class for the end user:
+// - read the page
+
+//Interface behaviour as a designer:
+//- receive the player object from gameFrame and populate stats based off of that object
+//- Use labels and text areas to present information clearly
+//- Button to return to previous creation screen to reroll and eventually re-battle
+
 package GUI; //places this class inside the GUI package
 
 import Classes.*; //imports all the character classes
@@ -16,10 +25,13 @@ public class BattlePanel extends JPanel { //BattlePanel is another screen of the
     //text area that shows the battle summary
     private JTextArea txtBattleSummary;
 
+    private Image backgroundImage;
+
     public BattlePanel(GameFrame frame) { //constructor runs when panel is created
         this.frame = frame;
-        setLayout(null); //manual layout (same as CreationPanel)
-        setBackground(new Color(140,155,220)); //same blue background as other screen
+        backgroundImage = new ImageIcon("src/Images/final3.png").getImage();
+        setOpaque(false);
+        setLayout(null);
 
         //TITLE LABEL
         JLabel titleLabel = new JLabel("Battle To The Death!"); //title of battle screen
@@ -123,7 +135,7 @@ public class BattlePanel extends JPanel { //BattlePanel is another screen of the
         return new Monster(name, hp, defence, agility, baseAttack);
     }
 
-    //method to set the correct player image depending on class
+    //method to set the correct player image depending on class using an override based on which character is selected
     private void setPlayerImage(Player player) {
         String className = player.getCharacterClass().toString();
         ImageIcon icon = null;
@@ -152,5 +164,10 @@ public class BattlePanel extends JPanel { //BattlePanel is another screen of the
         Image img = icon.getImage();
         Image scaled = img.getScaledInstance(150,120,Image.SCALE_SMOOTH);
         lblMonsterImage.setIcon(new ImageIcon(scaled));
+    }
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
 }

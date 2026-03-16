@@ -1,8 +1,9 @@
-/*
-a title
-an image placeholder
-a button
- */
+//pseudo for this class:
+// Interface behaviour as a designer:
+// - populates first panel with a background and an enter button
+// - Uses wizardry to scale the picture to the background size
+// - creates a title and button to switch to the next panel (creation screen)
+// -This panel is mainly visual with a button. Its just an entry screen
 package GUI;
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +14,6 @@ public class SplashPanel extends JPanel { //inherits from JPanel
 
     public SplashPanel(GameFrame p_frame) { //constructor receives the GameFrame
         this.frame = p_frame; //saves the passed-in GameFrame
-
         setBackground(new Color(138, 154, 91)); //sets the panel background colour to moss green
         setLayout(null); //uses manual positioning for components
 
@@ -35,13 +35,13 @@ public class SplashPanel extends JPanel { //inherits from JPanel
         //Title
         JLabel titleLabel = new JLabel("Dragons and Dungeons!!"); //creates the title text
         titleLabel.setFont(new Font("Calibri", Font.BOLD, 28)); //this sets title font stylisation
-        titleLabel.setBounds(240, 50, 350, 40); //sets title position and sizing
+        titleLabel.setBounds(240, 100, 350, 40); //sets title position and sizing
         add(titleLabel); //adds title to panel!
 
         //Start Button
         JButton buildButton = new JButton("Build A Character"); //creates button to begin making a character
         buildButton.setFont(new Font("Calibri", Font.BOLD, 22)); //sets button font
-        buildButton.setBounds(250, 460, 250, 40); //sets button position and size
+        buildButton.setBounds(400, 460, 250, 40); //sets button position and size
         buildButton.addActionListener(p_event -> frame.showCreationPanel()); //switches to creation screen when clicked
         add(buildButton); //adds button to panel (very important)
     }

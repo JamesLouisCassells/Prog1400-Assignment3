@@ -5,8 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/BattlePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/BattlePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/CreationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/CreationPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/GameFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/SplashPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/SplashPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/BattlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/BattlePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CreationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CreationPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/SplashPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SplashPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
