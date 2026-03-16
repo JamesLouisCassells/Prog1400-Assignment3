@@ -3,16 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0453e311-6b2a-431f-850a-abaeef7f0285" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Winter2026_PROG1400_Assignment3 Instructions video.mp4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/BattlePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/BattlePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/CreationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/CreationPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/GameFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment3/GUI/SplashPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment3/GUI/SplashPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/BattlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/BattlePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CreationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CreationPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/SplashPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SplashPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$OG 1400 - Assignment 3.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,40 +21,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "JamesLouisCassells"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JamesLouisCassells&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JamesLouisCassells/Prog1400-Assignment3.git",
-    "accountId": "cf859e91-915d-4776-87b9-f04ea3d8d6ae"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JamesLouisCassells/Prog1400-Assignment3.git&quot;,
+    &quot;accountId&quot;: &quot;cf859e91-915d-4776-87b9-f04ea3d8d6ae&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="3AzCH7D1MnFPXyzqKJcKBVJaC5b" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jlaca/nscc_y1/y1s2/PROG1400-OOP/Assignment3",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jlaca/nscc_y1/y1s2/PROG1400-OOP/Assignment3&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

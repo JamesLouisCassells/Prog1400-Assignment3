@@ -68,7 +68,7 @@ public class BattlePanel extends JPanel { //BattlePanel is another screen of the
         txtBattleSummary.setLineWrap(true); //wraps text automatically
         txtBattleSummary.setWrapStyleWord(true); //wraps on whole words
         txtBattleSummary.setFont(new Font("Calibri", Font.BOLD, 16));
-        txtBattleSummary.setBackground(Color.WHITE); //white background like mockup
+        txtBattleSummary.setBackground(Color.black); //white background like mockup
         txtBattleSummary.setForeground(new Color(180,200,225)); //light blue text
         add(txtBattleSummary);
 

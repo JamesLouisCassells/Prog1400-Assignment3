@@ -1,4 +1,4 @@
-/*'Main is just a launcher. All application setup happens in GameFrame.
+/*Main is just a launcher. All application setup happens in GameFrame.
 
 CreationPanel -> collect input
 GameFrame -> manage screens using cardlayout

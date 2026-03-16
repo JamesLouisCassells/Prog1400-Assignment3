@@ -39,10 +39,18 @@ public class SplashPanel extends JPanel { //inherits from JPanel
         add(titleLabel); //adds title to panel!
 
         //Start Button
-        JButton buildButton = new JButton("Build A Character"); //creates button to begin making a character
-        buildButton.setFont(new Font("Calibri", Font.BOLD, 22)); //sets button font
-        buildButton.setBounds(400, 460, 250, 40); //sets button position and size
-        buildButton.addActionListener(p_event -> frame.showCreationPanel()); //switches to creation screen when clicked
-        add(buildButton); //adds button to panel (very important)
-    }
+        JButton buildButton = new JButton("Build A Character");
+        buildButton.setFont(new Font("Calibri", Font.BOLD, 22));
+        buildButton.setBounds(400, 220, 280, 40);
+        buildButton.addActionListener(p_event -> frame.showCreationPanel());
+        add(buildButton);
+
+         JButton exitButton = new JButton("Exit");
+         exitButton.setFont(new Font("Calibri", Font.BOLD, 22));
+         exitButton.setBounds(400, 280, 280, 40);
+         exitButton.addActionListener(p_event -> System.exit(0));
+         exitButton.setBackground(Color.RED);
+         exitButton.setOpaque(true);
+         add(exitButton);
+   }
 }

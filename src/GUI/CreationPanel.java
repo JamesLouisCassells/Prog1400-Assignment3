@@ -102,6 +102,7 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         radWarrior.setBackground(new Color(140, 155, 220));
         radMage.setBackground(new Color(140, 155, 220));
         radPaladin.setBackground(new Color(140, 155, 220));
+
         //object of buttons created
         ButtonGroup classGroup = new ButtonGroup();
         classGroup.add(radWarrior);
@@ -164,7 +165,7 @@ public class CreationPanel extends JPanel { //CreationPanel is a JPanel (one scr
         add(weaponLabel);
 
         radSword = new JRadioButton("Sword");
-        radStaff = new JRadioButton("Staff");
+        radStaff = new JRadioButton("Dagger");
         radHammer = new JRadioButton("Hammer");
 
         radSword.setBounds(100, 450, 120, 30);
